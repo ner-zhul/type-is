@@ -5,7 +5,6 @@
   "repository": "https://gitlab.com/resource-development-office/tao-zhi-xue-tang/js-type-is.git",
   "author": "MhcII <snail975@gmail.com>",
   "description": "",
-  "license": "MIT",
   "keyword": "typeof",
   "devDependencies": {
     "eslint": "^5.7.0",
