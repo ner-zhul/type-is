@@ -1,0 +1,15 @@
+{
+  "name": "@tao-zhi-xue-tang/type-is",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://gitee.com/naughty_school/tao-zhi-xue-tang-type-of",
+  "author": "MhcII <snail975@gmail.com>",
+  "description": "",
+  "license": "MIT",
+  "keyword": "typeof",
+  "devDependencies": {
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}
