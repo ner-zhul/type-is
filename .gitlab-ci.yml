@@ -4,6 +4,7 @@ stages:
 deploy:
   stage: deploy
   script:
+  - export NPM_TOKEN="2785ad52-5151-4651-a8e8-0e3a81dfd5dc"
   - npm publish --access=public --registry http://registry.npmjs.org
   only:
   - master
