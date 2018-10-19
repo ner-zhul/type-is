@@ -2,7 +2,7 @@
   "name": "@tao-zhi-xue-tang/type-is",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://gitee.com/naughty_school/tao-zhi-xue-tang-type-of",
+  "repository": "https://gitlab.com/resource-development-office/tao-zhi-xue-tang/js-type-is.git",
   "author": "MhcII <snail975@gmail.com>",
   "description": "",
   "license": "MIT",
