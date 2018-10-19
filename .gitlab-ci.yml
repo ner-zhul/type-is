@@ -7,5 +7,3 @@ deploy:
   - npm publish --access=public --registry http://registry.npmjs.org
   only:
   - master
-  tags:
-  - full-stack
