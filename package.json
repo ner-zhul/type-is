@@ -1,6 +1,6 @@
 {
   "name": "@tao-zhi-xue-tang/type-is",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "index.js",
   "repository": "https://gitlab.com/resource-development-office/tao-zhi-xue-tang/js-type-is.git",
   "author": "MhcII <snail975@gmail.com>",

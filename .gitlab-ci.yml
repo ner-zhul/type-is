@@ -1,0 +1,12 @@
+before_script:
+- yarn install
+
+stages:
+- deploy
+
+deploy:
+  stage: deploy
+  script:
+  - npm publish --access=public --registry http://registry.npmjs.org
+  only:
+  - master
