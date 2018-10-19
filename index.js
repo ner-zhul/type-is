@@ -1,19 +1,34 @@
 /**
+ * Js 的基本数据类型：undefined、null、布尔值（Boolean）、字符串（String）、数值（Number）、对象（Object）、Symbol
+ * 此外还有函数
+ */
+/**
  * 定义了一系列类型
  */
 const type = {
+    // 基本类型
     undefined: 'undefined',
     null: 'null',
-    int: 'int',
-    float: 'float',
-    nan: 'NaN',
-    string: 'string',
     boolean: 'boolean',
+    string: 'string',
+    // number: 'number', // 拆分为子类型
+    // object: 'object', // 拆分为子类型
+    symbol: 'symbol',
     function: 'function',
-    array: 'array',
-    object: 'object',
+    // 自定义的数据类型
+    int: 'int', // number
+    float: 'float', // number
+    nan: 'NaN', // number
+    infinity: 'Infinity', // number
+    array: 'array', // object
+    objectExceptArray: 'objectExceptArray', // object
+    // 未知的类型
     unknown: 'unknown',
-    infinity: 'Infinity',
+};
+
+const combinationType = {
+    number: [type.int, type.float, type.nan, type.infinity],
+    object: [type.array, type.objectExceptArray],
 };
 
 /**
@@ -22,41 +37,31 @@ const type = {
  * @returns {string} 类型
  */
 function getType(value) {
-    /**
-     * js六大数据类型：number、string、object、Boolean、null、undefined
-     *
-     * number：包括数字和 NaN，数字可能是整数或者浮点数
-     * string： 由单引号或双引号来说明，如"string"
-     * object: 这个我也很难解释的说。就是除了上面五种之外的类型
-     * Boolean: 就是true和false啦
-     * null: 故名思久，null就是没有，什么也不表示
-     * undefined：未定义，就是你创建一个变量后却没给它赋值~
-     *
-     * typeof 除了可以判断数据类型还可以判断function类型
-     */
     switch (typeof value) {
+    case 'undefined':
+        return type.undefined;
+    case 'boolean':
+        return type.boolean;
+    case 'string':
+        return type.string;
     case 'number':
         if (Number.isNaN(value)) {
             return type.nan;
-        } if (Number.isFinite(value)) {
+        } if (!Number.isFinite(value)) {
             return type.infinity;
         } if (Number.isInteger(value)) {
             return type.int;
         }
         return type.float;
-    case 'string':
-        return type.string;
     case 'object':
-        if (value === null) {
+        if (Object.is(value, null)) {
             return type.null;
-        } if (value instanceof Array) {
+        } if (Array.isArray(value)) {
             return type.array;
         }
-        return type.object;
-    case 'boolean':
-        return type.boolean;
-    case 'undefined':
-        return type.undefined;
+        return type.objectExceptArray;
+    case 'symbol':
+        return type.symbol;
     case 'function':
         return type.function;
     default:
@@ -64,12 +69,32 @@ function getType(value) {
     }
 }
 
+// 基本类型
 function isUndefined(value) {
     return getType(value) === type.undefined;
 }
 function isNull(value) {
     return getType(value) === type.null;
 }
+function isBoolean(value) {
+    return getType(value) === type.boolean;
+}
+function isString(value) {
+    return getType(value) === type.string;
+}
+function isNumber(value) {
+    return combinationType.number.includes(getType(value));
+}
+function isObject(value) {
+    return combinationType.object.includes(getType(value));
+}
+function isSymbol(value) {
+    return getType(value) === type.symbol;
+}
+function isFunction(value) {
+    return getType(value) === type.function;
+}
+// 自定义的数据类型
 function isInt(value) {
     return getType(value) === type.int;
 }
@@ -79,55 +104,46 @@ function isFloat(value) {
 function isNan(value) {
     return getType(value) === type.nan;
 }
-function isString(value) {
-    return getType(value) === type.string;
-}
-function isBoolean(value) {
-    return getType(value) === type.boolean;
-}
-function isFunction(value) {
-    return getType(value) === type.function;
+function isInfinity(value) {
+    return getType(value) === type.infinity;
 }
 function isArray(value) {
     return getType(value) === type.array;
 }
 function isObjectExceptArray(value) {
-    return getType(value) === type.object;
+    return getType(value) === type.objectExceptArray;
 }
+// 未知的类型
 function isUnknown(value) {
     return getType(value) === type.unknown;
 }
-function isInfinity(value) {
-    return getType(value) === type.infinity;
-}
-function isNumber(value) {
-    return [type.int, type.float, type.infinity, type.nan].includes(getType(value));
-}
+// 扩展的快捷方法
 function isUndefinedOrNull(value) {
     return [type.undefined, type.null].includes(getType(value));
 }
-function isObject(value) {
-    return [type.array, type.object].includes(getType(value));
-}
+
 
 export default {
     type,
     getType,
-    // base
+    // 基本类型
     isUndefined,
     isNull,
+    isBoolean,
+    isString,
+    isNumber,
+    isObject,
+    isSymbol,
+    isFunction,
+    // 自定义的数据类型
     isInt,
     isFloat,
     isNan,
-    isString,
-    isBoolean,
-    isFunction,
+    isInfinity,
     isArray,
     isObjectExceptArray,
-    isUnknown,
-    isInfinity,
-    // extra
-    isNumber,
+    // 扩展的快捷方法
     isUndefinedOrNull,
-    isObject,
+    // 未知的类型
+    isUnknown,
 };
