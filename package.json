@@ -1,18 +1,25 @@
 {
   "name": "@tao-zhi-xue-tang/type-is",
   "version": "1.1.1",
-  "main": "index.js",
+  "main": "./lib/type-is.js",
   "repository": "https://gitlab.com/resource-development-office/tao-zhi-xue-tang/js-type-is.git",
   "author": "MhcII <snail975@gmail.com>",
   "description": "",
   "keyword": "typeof",
   "scripts": {
-    "npmPublish": "npm publish --access=public --registry http://registry.npmjs.org"
+    "build": "webpack --color --mode production",
+    "publish:npm": "npm publish --access=public --registry http://registry.npmjs.org"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^1.0.0",
     "eslint": "^5.7.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0"
+    "eslint-plugin-import": "^2.14.0",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
   },
   "files": [
     "index.js"
