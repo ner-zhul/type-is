@@ -8,7 +8,8 @@
   "keyword": "typeof",
   "scripts": {
     "build": "webpack --color --mode production",
-    "publish:npm": "npm publish --access=public --registry http://registry.npmjs.org"
+    "publish:npm": "npm publish --access=public --registry http://registry.npmjs.org",
+    "git:refresh": "git rm --cached -f -r . && git add ."
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
