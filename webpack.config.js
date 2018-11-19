@@ -11,6 +11,7 @@ module.exports = {
     module: {
         rules: [
             { test: /\.m?js$/, exclude: /(node_modules|bower_components)/, loader: 'babel-loader' },
+            { test: /\.m?js$/, exclude: /(node_modules|bower_components)/, loader: 'eslint-loader' },
         ],
     },
 };
