@@ -1,6 +1,6 @@
 {
   "name": "@tao-zhi-xue-tang/type-is",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "./lib/type-is.js",
   "repository": "https://gitlab.com/resource-development-office/tao-zhi-xue-tang/js-type-is.git",
   "author": "MhcII <snail975@gmail.com>",
@@ -23,6 +23,6 @@
     "webpack-cli": "^3.1.2"
   },
   "files": [
-    "index.js"
+    "./lib/type-is.js"
   ]
 }
