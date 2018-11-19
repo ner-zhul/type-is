@@ -5,7 +5,7 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'type-is.js',
-        path: path.resolve(__dirname, 'lib'),
+        path: path.resolve(__dirname, 'bin'),
         library: 'typeIs',
         libraryTarget: 'umd',
         libraryExport: 'default',
