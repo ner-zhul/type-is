@@ -6,6 +6,9 @@ module.exports = {
     output: {
         filename: 'type-is.js',
         path: path.resolve(__dirname, 'lib'),
+        library: 'typeIs',
+        libraryTarget: 'umd',
+        libraryExport: 'default',
     },
     plugins: [new CleanWebpackPlugin(['dist'])],
     module: {

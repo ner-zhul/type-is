@@ -122,7 +122,6 @@ function isUndefinedOrNull(value) {
     return [type.undefined, type.null].includes(getType(value));
 }
 
-
 export default {
     type,
     getType,
