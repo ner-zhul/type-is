@@ -4,6 +4,7 @@
   "main": "./dist/typeIs.js",
   "author": "MhcII <mhcii@mhcii.com>",
   "scripts": {
+    "dev": "rollup -c rollup.config.js  --watch",
     "build": "rollup -c rollup.config.js",
     "test": "jest",
     "publish:npm": "npm publish --access=public --registry http://registry.npmjs.org",

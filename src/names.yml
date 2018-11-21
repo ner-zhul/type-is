@@ -1,0 +1,12 @@
+# js 有 7 大数据类型
+undefined: 'undefined'
+null: 'null'
+boolean: 'boolean'
+string: 'string'
+number: 'number'
+object: 'object'
+symbol: 'symbol'
+# 这不属于数据类型，但是也是常用的一种类型
+function: 'function'
+# 扩展类型
+array: 'array'
