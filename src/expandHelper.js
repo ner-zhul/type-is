@@ -9,7 +9,11 @@ function isInt(target) {
 }
 function isFloat(target) {
   if (type(target) === names.number) {
-    return !Number.isInteger(target);
+    if (Number.isFinite(target)) {
+      if (!Number.isNaN(target)) {
+        return !Number.isInteger(target);
+      }
+    }
   }
   return false;
 }
