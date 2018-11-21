@@ -19,7 +19,8 @@
     "eslint-plugin-import": "^2.14.0",
     "jest": "^23.6.0",
     "prettier": "^1.15.2",
-    "rollup": "^0.67.3"
+    "rollup": "^0.67.3",
+    "rollup-plugin-yaml": "^1.1.0"
   },
   "files": [
     "bin"
