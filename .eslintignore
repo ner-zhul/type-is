@@ -1,3 +1,3 @@
-/bin/**/*
+/dist/**/*
 /document/**/*
 /node_modules/**/*

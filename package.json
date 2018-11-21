@@ -1,7 +1,7 @@
 {
   "name": "@tao-zhi-xue-tang/type-is",
   "version": "1.1.3",
-  "main": "./bin/typeIs.js",
+  "main": "./dist/typeIs.js",
   "author": "MhcII <mhcii@mhcii.com>",
   "scripts": {
     "build": "rollup -c rollup.config.js",
