@@ -11,6 +11,14 @@ import {
   isFunction,
   isArray,
 } from './helper';
+import {
+  isInt,
+  isFloat,
+  isNan,
+  isInfinity,
+  isNone,
+  isTruth,
+} from './expandHelper';
 
 export default {
   names,
@@ -25,4 +33,11 @@ export default {
   isSymbol,
   isFunction,
   isArray,
+  // expand
+  isInt,
+  isFloat,
+  isNan,
+  isInfinity,
+  isNone,
+  isTruth,
 };
