@@ -18,6 +18,7 @@ import {
   isInfinity,
   isNone,
   isTruth,
+  isOriginObject,
 } from './expandHelper';
 
 export default {
@@ -40,4 +41,5 @@ export default {
   isInfinity,
   isNone,
   isTruth,
+  isOriginObject,
 };

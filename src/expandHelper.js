@@ -31,7 +31,10 @@ function isNone(target) {
 function isTruth(target) {
   return !!target;
 }
+function isOriginObject(target) {
+  return [names.null, names.object, names.array].includes(type(target));
+}
 
 export {
-  isInt, isFloat, isNan, isInfinity, isNone, isTruth,
+  isInt, isFloat, isNan, isInfinity, isNone, isTruth, isOriginObject,
 };
