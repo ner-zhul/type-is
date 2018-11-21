@@ -1,10 +1,14 @@
 import typeIs from '../dist/typeIs';
 
-test('是否包含名称变量', () => {
-  expect(typeIs.names).toBeDefined();
+test('基本测试', () => {
+  expect(typeIs).toBeDefined();
+  expect(typeof typeIs).toBe('object');
 });
 
 test('各类型名称', () => {
+  expect(typeIs.names).toBeDefined();
+  expect(typeof typeIs.names).toBe('object');
+  //
   expect(typeIs.names.undefined).toBe('undefined');
   expect(typeIs.names.null).toBe('null');
   expect(typeIs.names.boolean).toBe('boolean');
