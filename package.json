@@ -1,6 +1,6 @@
 {
-  "name": "@tao-zhi-xue-tang/type-is",
-  "version": "1.1.6",
+  "name": "@ner-zhul/type-is",
+  "version": "1.0.0",
   "main": "./dist/typeIs.js",
   "author": "MhcII <mhcii@mhcii.com>",
   "scripts": {
