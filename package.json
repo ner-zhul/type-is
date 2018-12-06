@@ -1,7 +1,8 @@
 {
   "name": "@ner-zhul/type-is",
   "version": "1.0.0",
-  "main": "./dist/typeIs.js",
+  "main": "./dist/typeIs-es5.js",
+  "module": "./dist/typeIs.js",
   "author": "MhcII <mhcii@mhcii.com>",
   "scripts": {
     "dev": "rollup -c rollup.config.js  --watch",
