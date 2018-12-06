@@ -1,6 +1,6 @@
 {
   "name": "@ner-zhul/type-is",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./dist/typeIs-es5.js",
   "module": "./dist/typeIs.js",
   "author": "MhcII <mhcii@mhcii.com>",
