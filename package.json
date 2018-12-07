@@ -1,12 +1,13 @@
 {
   "name": "@ner-zhul/type-is",
   "version": "1.0.1",
-  "main": "./dist/typeIs-es5.js",
+  "main": "./dist/typeIs.cjs.js",
   "module": "./dist/typeIs.js",
+  "browser": "./dist/typeIs.umd.js",
   "author": "MhcII <mhcii@mhcii.com>",
   "scripts": {
-    "dev": "rollup -c rollup.config.js  --watch",
-    "build": "rollup -c rollup.config.js",
+    "dev": "rollup -cw",
+    "build": "rollup -c",
     "test": "jest",
     "publish:npm": "npm publish --access=public --registry http://registry.npmjs.org",
     "git:refresh": "git rm --cached -f -r . && git add ."
@@ -22,6 +23,7 @@
     "jest": "^23.6.0",
     "prettier": "^1.15.2",
     "rollup": "^0.67.3",
+    "rollup-plugin-cleaner": "^0.2.0",
     "rollup-plugin-yaml": "^1.1.0"
   },
   "files": [

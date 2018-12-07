@@ -4026,12 +4026,19 @@ ret@~0.1.10:
   resolved "http://registry.npm.taobao.org/ret/download/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
   integrity sha1-uKSCXVvbH8P29Twrwz+BOIaBx7w=
 
-rimraf@^2.5.4, rimraf@^2.6.1, rimraf@~2.6.2:
+rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6.2, rimraf@~2.6.2:
   version "2.6.2"
   resolved "http://registry.npm.taobao.org/rimraf/download/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
   integrity sha1-LtgVDSShbqhlHm1u8PR8QVjOejY=
   dependencies:
     glob "^7.0.5"
+
+rollup-plugin-cleaner@^0.2.0:
+  version "0.2.0"
+  resolved "http://registry.npm.taobao.org/rollup-plugin-cleaner/download/rollup-plugin-cleaner-0.2.0.tgz#e9fb8d6b3b42a1c7566dee4c71f1302b45cfc108"
+  integrity sha1-6fuNaztCocdWbe5McfEwK0XPwQg=
+  dependencies:
+    rimraf "^2.6.2"
 
 rollup-plugin-json@^2.0.1:
   version "2.3.1"
