@@ -1,9 +1,8 @@
 {
   "name": "@ner-zhul/type-is",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "./dist/typeIs.cjs.js",
   "module": "./dist/typeIs.js",
-  "browser": "./dist/typeIs.umd.js",
   "author": "MhcII <mhcii@mhcii.com>",
   "scripts": {
     "dev": "rollup -cw",
