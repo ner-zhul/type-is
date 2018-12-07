@@ -8,7 +8,6 @@ export default {
   input: 'src/main.js',
   output: [
     { name: 'typeIs', file: pkg.module, format: 'es' },
-    { name: 'typeIs', file: pkg.browser, format: 'umd' },
     { name: 'typeIs', file: pkg.main, format: 'cjs' },
   ],
   plugins: [yaml(), cleaner({ targets: ['./dist/'] })],
