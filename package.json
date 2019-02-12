@@ -1,8 +1,7 @@
 {
   "name": "@ner-zhul/type-is",
-  "version": "1.0.2",
-  "main": "./dist/typeIs.cjs.js",
-  "module": "./dist/typeIs.js",
+  "version": "1.1.0",
+  "main": "./dist/typeIs.js",
   "author": "MhcII <mhcii@mhcii.com>",
   "scripts": {
     "dev": "rollup -cw",
@@ -22,8 +21,7 @@
     "jest": "^23.6.0",
     "prettier": "^1.15.2",
     "rollup": "^0.67.3",
-    "rollup-plugin-cleaner": "^0.2.0",
-    "rollup-plugin-yaml": "^1.1.0"
+    "rollup-plugin-cleaner": "^0.2.0"
   },
   "files": [
     "dist"
