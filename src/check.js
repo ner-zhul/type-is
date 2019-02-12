@@ -1,29 +1,29 @@
-import getName from './getName';
+import getType from './type';
 import names from './names';
 
 function isUndefined(target) {
-  return getName(target) === names.undefined;
+  return getType(target) === names.undefined;
 }
 function isNull(target) {
-  return getName(target) === names.null;
+  return getType(target) === names.null;
 }
 function isBoolean(target) {
-  return getName(target) === names.boolean;
+  return getType(target) === names.boolean;
 }
 function isString(target) {
-  return getName(target) === names.string;
+  return getType(target) === names.string;
 }
 function isNumber(target) {
-  return getName(target) === names.number;
+  return getType(target) === names.number;
 }
 function isObject(target) {
-  return getName(target) === names.object;
+  return getType(target) === names.object;
 }
 function isSymbol(target) {
-  return getName(target) === names.symbol;
+  return getType(target) === names.symbol;
 }
 function isFunction(target) {
-  return getName(target) === names.function;
+  return getType(target) === names.function;
 }
 
 export {

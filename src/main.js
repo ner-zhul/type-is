@@ -1,5 +1,5 @@
 import names from './names';
-import type from './getName';
+import type from './type';
 import {
   isUndefined,
   isNull,
