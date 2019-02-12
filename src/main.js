@@ -1,5 +1,5 @@
-import names from './names.yml';
-import type from './type';
+import names from './names';
+import type from './getName';
 import {
   isUndefined,
   isNull,
@@ -9,17 +9,15 @@ import {
   isObject,
   isSymbol,
   isFunction,
-  isArray,
-} from './helper';
+} from './check';
 import {
   isInt,
   isFloat,
-  isNan,
+  isNaN,
   isInfinity,
   isNone,
-  isTruth,
-  isOriginObject,
-} from './expandHelper';
+  isArray,
+} from './expandCheck';
 
 export default {
   names,
@@ -33,13 +31,11 @@ export default {
   isObject,
   isSymbol,
   isFunction,
-  isArray,
   // expand
   isInt,
   isFloat,
-  isNan,
+  isNaN,
   isInfinity,
   isNone,
-  isTruth,
-  isOriginObject,
+  isArray,
 };
