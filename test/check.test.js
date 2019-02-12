@@ -55,15 +55,9 @@ test('辅助函数 : number', () => {
 test('辅助函数 : object', () => {
   expect(typeIs.isObject({})).toBeTruthy();
   expect(typeIs.isObject(new Date())).toBeTruthy();
+  expect(typeIs.isObject([])).toBeTruthy();
   //
-  expect(typeIs.isObject([])).toBeFalsy();
   expect(typeIs.isObject(null)).toBeFalsy();
-});
-test('辅助函数 : array', () => {
-  expect(typeIs.isArray([])).toBeTruthy();
-  expect(typeIs.isArray([1, 2, 3])).toBeTruthy();
-  //
-  expect(typeIs.isArray({ a: 1, b: 2, c: 3 })).toBeFalsy();
 });
 test('辅助函数 : symbol', () => {
   expect(typeIs.isSymbol(Symbol(''))).toBeTruthy();

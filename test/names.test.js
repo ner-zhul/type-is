@@ -15,7 +15,6 @@ test('各类型名称', () => {
   expect(typeIs.names.string).toBe('string');
   expect(typeIs.names.number).toBe('number');
   expect(typeIs.names.object).toBe('object');
-  expect(typeIs.names.array).toBe('array');
   expect(typeIs.names.symbol).toBe('symbol');
   expect(typeIs.names.function).toBe('function');
 });

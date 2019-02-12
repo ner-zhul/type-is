@@ -52,10 +52,10 @@ test('辅助函数 : isFloat', () => {
   expect(typeIs.isFloat(Infinity)).toBeFalsy();
 });
 test('辅助函数 : isNan', () => {
-  expect(typeIs.isNan(NaN)).toBeTruthy();
-  expect(typeIs.isNan(0 / 0)).toBeTruthy();
+  expect(typeIs.isNaN(NaN)).toBeTruthy();
+  expect(typeIs.isNaN(0 / 0)).toBeTruthy();
   //
-  expect(typeIs.isNan(1)).toBeFalsy();
+  expect(typeIs.isNaN(1)).toBeFalsy();
 });
 test('辅助函数 : isInfinity', () => {
   expect(typeIs.isInfinity(Infinity)).toBeTruthy();
@@ -69,41 +69,9 @@ test('辅助函数 : isNone', () => {
   expect(typeIs.isNone(0)).toBeFalsy();
   expect(typeIs.isNone('')).toBeFalsy();
 });
-test('辅助函数 : isTruth', () => {
-  // 布尔
-  expect(typeIs.isTruth(true)).toBeTruthy();
-  // 数值
-  expect(typeIs.isTruth(1.0)).toBeTruthy();
-  expect(typeIs.isTruth(-11)).toBeTruthy();
-  expect(typeIs.isTruth(0.001)).toBeTruthy();
-  expect(typeIs.isTruth(Infinity)).toBeTruthy();
-  // 字符串
-  expect(typeIs.isTruth(' ')).toBeTruthy();
-  expect(typeIs.isTruth(' 111')).toBeTruthy();
-  // 对象
-  expect(typeIs.isTruth([])).toBeTruthy();
-  expect(typeIs.isTruth({})).toBeTruthy();
-  // symbol
-  expect(typeIs.isTruth(Symbol(''))).toBeTruthy();
-  // 函数
-  expect(typeIs.isTruth(() => {})).toBeTruthy();
+test('辅助函数 : array', () => {
+  expect(typeIs.isArray([])).toBeTruthy();
+  expect(typeIs.isArray([1, 2, 3])).toBeTruthy();
   //
-  // 布尔
-  expect(typeIs.isTruth(false)).toBeFalsy();
-  // 数值
-  expect(typeIs.isTruth(0)).toBeFalsy();
-  expect(typeIs.isTruth(NaN)).toBeFalsy();
-  // 字符串
-  expect(typeIs.isTruth('')).toBeFalsy();
-  // 对象
-  expect(typeIs.isTruth(null)).toBeFalsy();
-  // undefined
-  expect(typeIs.isTruth(undefined)).toBeFalsy();
-});
-test('辅助函数 : isOriginObject', () => {
-  expect(typeIs.isOriginObject({})).toBeTruthy();
-  expect(typeIs.isOriginObject([])).toBeTruthy();
-  expect(typeIs.isOriginObject(null)).toBeTruthy();
-  //
-  expect(typeIs.isOriginObject(() => {})).toBeFalsy();
+  expect(typeIs.isArray({ a: 1, b: 2, c: 3 })).toBeFalsy();
 });

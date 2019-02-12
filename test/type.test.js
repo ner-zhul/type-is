@@ -55,15 +55,9 @@ test('类型判断 : number', () => {
 test('类型判断 : object', () => {
   expect(typeIs.type({})).toBe(typeIs.names.object);
   expect(typeIs.type(new Date())).toBe(typeIs.names.object);
+  expect(typeIs.type([])).toBe(typeIs.names.object);
   //
-  expect(typeIs.type([])).not.toBe(typeIs.names.object);
   expect(typeIs.type(null)).not.toBe(typeIs.names.object);
-});
-test('类型判断 : array', () => {
-  expect(typeIs.type([])).toBe(typeIs.names.array);
-  expect(typeIs.type([1, 2, 3])).toBe(typeIs.names.array);
-  //
-  expect(typeIs.type({ a: 1, b: 2, c: 3 })).not.toBe(typeIs.names.array);
 });
 test('类型判断 : symbol', () => {
   expect(typeIs.type(Symbol(''))).toBe(typeIs.names.symbol);
