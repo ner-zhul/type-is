@@ -15,7 +15,7 @@ function isInfinity(target) {
 }
 function isInt(target) {
   if (getType(target) === names.number) {
-    if (!isNaN(target) || !isInfinity(target)) {
+    if (!isNaN(target) && !isInfinity(target)) {
       return Number.isInteger(target);
     }
   }
@@ -23,7 +23,7 @@ function isInt(target) {
 }
 function isFloat(target) {
   if (getType(target) === names.number) {
-    if (!isNaN(target) || !isInfinity(target)) {
+    if (!isNaN(target) && !isInfinity(target)) {
       return !Number.isInteger(target);
     }
   }
